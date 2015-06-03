@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Firefox Recorder</title>
+<style>
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header>
+<h1>Firefox Ogg Recorder</h1>
+</header>
+
+  <p> make sure you enable permissions for recording audio. (Note: This project works only in firefox)</p>
+  <div id='controls'>
+    <button id='start' >start</button>
+    <button id='stop' >stop</button>
+  </div>
+  <div id='options'>
+	  <div > 
+	  output type: 
+		<select name="type" id = "type">
+		  <option value="wav">wav</option> 
+		  <option value="ogg" selected>ogg</option>
+		  <option value="mp3">mp3</option>
+		</select>
+	  </div>
+	  <div> auto-upload : <input type='checkbox' id='autoUpload' /></div>
+	  <div> upload every( in seconds): <input type='number' id='intervalTime' value='3' /></div>
+  </div>
+  <div id='downloads'>
+  </div>
+  <ul id="recordingslist"></ul>
+
+<script src="scripts/socket.io-1.2.0.js"></script>
+<script src="scripts/recorder.js"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>
